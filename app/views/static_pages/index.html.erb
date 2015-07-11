@@ -18,8 +18,8 @@
   <div class="nav">
     <a  id="full-menu" href="#">&equiv;</a>
     <a class="active to-scroll" href="#top">Home</a>
-    <a class="to-scroll" href="#about">About Us</a>
     <a class="to-scroll" href="#ceremony">Ceremony</a>
+    <a class="to-scroll" href="#stay">Stay</a>
     <a class="to-scroll" href="#gifts">Gifts</a>
     <a class="to-scroll" href="#rsvp">R.S.V.P.</a>
     <div class="effect"></div>
@@ -30,7 +30,11 @@
 <!-- HEADER STARTS -->
 <header class="header" role="banner" id="top">
       <h1 class="wrapper"><span>Samantha</span> & <span>Trevor</span></h1>
-      <div class="images"><span class="her pile"></span><span class="him pile"></span></div> 
+      <div class="single">
+        <span class="image pile">
+          <%= image_tag "tram.jpg", size: "498x352", alt: "Church" %>
+        </span>
+      </div>
       <h2>
         <span class="event">are getting married...</span>
         <span class="date">15.05.2016</span>
@@ -43,30 +47,25 @@
 <div class="content">
 
     <!-- ABOUT SECTION STARTS -->
-    <section id="about" class="about clearfix">
-      <div class="she">
-        <p>
-          <strong>Jennifer Jones</strong> sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-          </p>
-      </div>
-      <div class="he">
-        <p>
-          <strong>Matthew Brown</strong> sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-        </p>
-      </div>
+    <section id="ceremony" class="about clearfix">
       <div class="they">
+        <h2 class="title">Ceremony</h2>
+        <div style="text-align: center;" class="single">
+          <span class="image pile">
+            <%= image_tag "wedding.jpg", size: "300", alt: "Church" %>
+          </span>
+        </div>
         <p>
-          <strong>They</strong> sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+          <strong>Trev & Sam</strong> will be getting married at Plantation Island Resort in Fiji on the 15th of May 2016 at around midday. What time exactly, we're not too sure, it's Fiji time after all!
         </p>
-        <p>Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-        </p>
+        <p>Make sure to leave plenty of time when you walk to the ceremony from your island bure, pool side location or palm strung hammock, as you may have to stop for a cocktail and a snooze on the way. Wear your fanciest beach wear, leave the shoes behind, slick back your hair and we'll see you there for that very special moment to share.</p>
       </div>
     </section>
     <!-- ABOUT SECTION ENDS -->
     
     
     <!-- CEREMONY SECTION STARTS -->
-    <section  id="ceremony" class="flex-container ceremony">
+    <section  id="stay" class="flex-container ceremony">
       
       <div class="flexslider">
         <ul class="slides">
@@ -76,19 +75,20 @@
         </ul>
       </div>
       
-      <div  class="wrapper clearfix">
-        
-          <h2 class="title">15.05.2016</h2>
-          <div class="ceremony-1">
-            <span class="image pile">
-              <%= image_tag "church.jpg", size: "300", alt: "Church" %>
-            </span>
-            <h3>Ceremony</h3>
-            <p>11 AM</p>
-            <p>St. Andrews, Burgess Hill</p>
-            <a class="map" data-lat="50.960503" data-lng="-0.121106" data-title="Ceremony">Show in Google Maps</a>
-            <div class="pile my_map"><div id="map-ceremony"></div></div>		
-          </div>
+      <div class="wrapper clearfix stay">
+          <h2 class="title">Stay</h2>
+          <p>Plantation Island Resort Fiji is the location of both the wedding and reception,
+            nestled on the 553 acre island of Malolo Lail ai part of the Mamanuca Islands and 
+            is just 16km offshore from Fijis mainland international airport Nadi.</p>
+          <p>Samantha and Trevor will be staying at the resort from May 10th to May 17th</p>
+          <p>We have arranged a fantastic group discount on all bookings made through 
+            Planation Island Resort. Bookings must be made direct with the resort and 
+            cannot be combined with any other specials.</p>
+          <p>20% off all accommodation bookings. Any booking made for 5 nights or more will
+            also receive a $200 Fiji Dollar resort food and beverage voucher.</p>
+            <p>To take advantage of this deal please send your booking request to
+            <a href="mailto:reserve@plantationisland.com?subject=Hutchings / Wistaff Wedding Special May 15th">reserve@plantationisland.com</a>
+            with the subject: Hutchings / Wistaff Wedding Special May 15th</p>
         </div>
     </section>
     <!-- CEREMONY SECTION ENDS -->
@@ -97,9 +97,17 @@
     <section id="gifts" class="registry">
       <div class="wrapper">
         <h2 class="title">Gifts</h2>
-        <h3>Some awesome gifts ideas</h3>
-        <p>Your presence is enough but if you are compelled by extreme generosity, registries have been set up
-for your convenience at :</p>
+        <h3>To gift or not to gift, that is the question.</h3>
+        <p>A destination wedding was our desire,<br>
+          So simply your presence is all we require<br>
+          Sharing our day with the people we love,<br>
+          For us is definitely gift enough.<br>
+          But if a gift is still your intention,<br>
+          May we take this opportunity to mention,<br>
+          Rather than something we have already got,<br>
+          We would appreciate a donation for our<br>
+          Honeymoon pot.
+        </p>
       </div>
     </section>
     <!--- REGISTRY ENDS -->

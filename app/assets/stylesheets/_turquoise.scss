@@ -516,11 +516,36 @@ footer {
   font-size: .8em; }
   footer p {
     margin: 0; }
+  .stay { text-align: left; }
+  .stay p { margin-top: 10px; margin-bottom: 10px; }
 
 /*-----------------------------------------------------------------*/
 /*------------------------- 	MEDIA QUERIES  ----------------------*/
 /*-----------------------------------------------------------------*/
 @media only screen and (min-width: 480px) {
+  .stay h2 { z-index: 99; }
+  .single .image {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 1em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  .single .pile:before {
+    padding: 2px;
+    left: -2px;
+    top: -1px; }
+
+  .single .image {
+    padding: 8px;
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); } }
+@media only screen and (min-width: 768px) {
+  h3 {
+    font-size: 2em;
+    margin: 0.2em 0 0.2em; }
+
   .pile:before {
     content: "";
     position: absolute;
@@ -548,7 +573,7 @@ footer {
   h2 {
     font-size: 2em; }
 
-  .about p {
+  .about p, .stay p {
     max-width: 480px;
     margin-left: auto;
     margin-right: auto; }
@@ -668,7 +693,7 @@ footer {
   .content {
     margin-top: 97px; }
 
-  .about p {
+  .about p, .stay p {
     max-width: 640px; }
 
   .ceremony-1, .ceremony-2 {
