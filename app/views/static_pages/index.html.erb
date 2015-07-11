@@ -1,1 +1,169 @@
-Home
+<script>
+  $( document ).on('ready', function() {
+    // init Save the Date
+    save_the_date.init({
+      weddingDate: "2016/05/15, 12:00", 
+      //Date : enter your wedding date
+      labels: ["days", "hours", "minutes", "secs"], 
+      //Array of strings : labels of time units
+      sendServerMessages: ["Thank you.", "Sorry, your message could not be sent due to an error."],
+      //Array image pathes
+      titles : ['Just us', 'Reception', 'Flowers we chose', 'In the eyes'],
+      //Array of strings : corresponding titles
+      });	
+  });
+</script>
+<!--- NAVIGATION STARTS -->
+<div class="nav-container">
+  <div class="nav">
+    <a  id="full-menu" href="#">&equiv;</a>
+    <a class="active to-scroll" href="#top">Home</a>
+    <a class="to-scroll" href="#about">About Us</a>
+    <a class="to-scroll" href="#ceremony">Ceremony</a>
+    <a class="to-scroll" href="#gifts">Gifts</a>
+    <a class="to-scroll" href="#rsvp">R.S.V.P.</a>
+    <div class="effect"></div>
+  </div>
+</div>
+<!--- NAVIGATION ENDS -->
+
+<!-- HEADER STARTS -->
+<header class="header" role="banner" id="top">
+      <h1 class="wrapper"><span>Samantha</span> & <span>Trevor</span></h1>
+      <div class="images"><span class="her pile"></span><span class="him pile"></span></div> 
+      <h2>
+        <span class="event">are getting married...</span>
+        <span class="date">15.05.2016</span>
+        <span id="timer" class="timer"></span>
+      </h2>		
+</header>	
+<!-- HEADER ENDS -->
+
+<!--- MAIN CONTENT STARTS -->
+<div class="content">
+
+    <!-- ABOUT SECTION STARTS -->
+    <section id="about" class="about clearfix">
+      <div class="she">
+        <p>
+          <strong>Jennifer Jones</strong> sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+          </p>
+      </div>
+      <div class="he">
+        <p>
+          <strong>Matthew Brown</strong> sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+        </p>
+      </div>
+      <div class="they">
+        <p>
+          <strong>They</strong> sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+        </p>
+        <p>Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+        </p>
+      </div>
+    </section>
+    <!-- ABOUT SECTION ENDS -->
+    
+    
+    <!-- CEREMONY SECTION STARTS -->
+    <section  id="ceremony" class="flex-container ceremony">
+      
+      <div class="flexslider">
+        <ul class="slides">
+          <li style="background-image: url(<%= image_path "slide0.jpg" %>);"></li>
+          <li style="background-image: url(<%= image_path "slide1.jpg" %>);"></li>
+          <li class="fixed" style="background-image: url(<%= image_path "slide2.jpg" %>);"></li>
+        </ul>
+      </div>
+      
+      <div  class="wrapper clearfix">
+        
+          <h2 class="title">15.05.2016</h2>
+          <div class="ceremony-1">
+            <span class="image pile">
+              <%= image_tag "church.jpg", size: "300", alt: "Church" %>
+            </span>
+            <h3>Ceremony</h3>
+            <p>11 AM</p>
+            <p>St. Andrews, Burgess Hill</p>
+            <a class="map" data-lat="50.960503" data-lng="-0.121106" data-title="Ceremony">Show in Google Maps</a>
+            <div class="pile my_map"><div id="map-ceremony"></div></div>		
+          </div>
+        </div>
+    </section>
+    <!-- CEREMONY SECTION ENDS -->
+    
+    <!--- REGISTRY STARTS -->	
+    <section id="gifts" class="registry">
+      <div class="wrapper">
+        <h2 class="title">Gifts</h2>
+        <h3>Some awesome gifts ideas</h3>
+        <p>Your presence is enough but if you are compelled by extreme generosity, registries have been set up
+for your convenience at :</p>
+      </div>
+    </section>
+    <!--- REGISTRY ENDS -->
+
+    <!--- RSVP STARTS -->
+    <section id="rsvp" class="contact">
+        <h2 class="title">R.S.V.P.</h2>
+      <div class="wrapper">
+
+        <div id="note">
+          <p>We look forward to celebrating with you in a tropical paradise.</p> 
+          <p>Please reply asap.</p>
+        </div>
+        
+        <form action="#" method="post">
+          
+          <fieldset>
+            <h3>Will you be joining us for the best wedding, party, holiday ever?</h3>
+            <div class="checkbox">
+              <input type="checkbox" name="check-reception" id="check-reception" >
+              <label for="check-reception">Yes! Sign us up captain.</label>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" name="check-ceremony" id="check-ceremony" >
+              <label for="check-ceremony">Sorry, no can do.</label>
+            </div>
+          </fieldset>
+
+          <fieldset id="guests">
+            <h3>Guest Details:</h3>
+            <input type="text"  id="adults" name="adults" placeholder="Number of Adult Guests*">
+            <input type="text"  id="children" name="children" placeholder="Number of Children">
+          </fieldset>
+          
+          <fieldset>
+            <h3>Personal Informations:</h3>
+            <input type="text" id="name" name="name" placeholder="Your Name*">
+            <input type="email" id="email" name="email" placeholder="Your E-mail*">
+            <textarea name="message" class="form-message" id="message" placeholder="Want to drop us a line ?"></textarea>
+          </fieldset>
+          
+          <input type="submit" class="submit" id="send" value="send">
+          
+        </form>
+        
+        <h3>Or contact us directly:</h3>
+        <div class="contact-details contact-details-1">
+          <h4>Samantha</h4>
+          <p>+61 466 500 915</p>
+          <p>
+            <a href="mailto:samanthakhutchings@gmail.com?subject=RSVP">samanthakhutchings@gmail.com</a>
+          </p>
+        </div>
+        <div class="contact-details contact-details-2">
+          <h4>Trevor</h4>
+          <p>+61 410 831 066</p>
+          <p>
+            <a href="mailto:easyco@gmail.com?subject=RSVP">easyco@gmail.com</a>
+          </p>
+        </div>
+          
+      </div>
+        
+    </section>
+    <!--- RSVP ENDS -->
+  </div>	
+  <!--- MAIN CONTENT ENDS -->

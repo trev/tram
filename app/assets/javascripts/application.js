@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require modernizr
+//= require gmaps
+//= require jquery.fancybox
+//= require jquery.flexslider
+//= require save_the_date
 //= require_tree .
