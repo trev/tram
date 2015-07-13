@@ -321,6 +321,9 @@ h4 {
   padding-bottom: 2em;
   text-align: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
+  .ceremony h3 {
+    text-align: center;
+  }
   .ceremony .wrapper {
     padding-top: 1em; }
   .ceremony h2 {
@@ -600,6 +603,9 @@ footer {
     background: #fff;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); } }
 @media only screen and (min-width: 768px) {
+  .ceremony h3 {
+    margin: 1em 0 0.5em;
+  }
   h3 {
     font-size: 2em;
     margin: 0.2em 0 0.2em; }
@@ -747,7 +753,7 @@ footer {
     box-shadow: 0 -5px 4px rgba(0, 0, 0, 0.15); }
   .ceremony .wrapper {
     position: relative;
-    padding: 3em 0 0;
+    padding: 5em 0 0;
     margin-top: 8em; }
 
   .about {
@@ -809,7 +815,8 @@ footer {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.05), inset 0 0 20px white; } }
 @media only screen and (min-width: 1140px) {
   .ceremony .wrapper {
-    background: image-url("decor_small.png") center 200px no-repeat; }
+    background: image-url("decor_small.png") center 20px no-repeat;
+  }
 
   .my_map {
     width: 436px; } }
@@ -826,7 +833,7 @@ footer {
     background-size: 232px 107px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1140px), only screen and (min--moz-device-pixel-ratio: 1.5) and (min-width: 1140px), only screen and (min-device-pixel-ratio: 1.5) and (min-width: 1140px) {
   .ceremony .wrapper {
-    background: image-url("decor_small@2x.png") center 200px no-repeat;
+    background: image-url("decor_small@2x.png") center 20px no-repeat;
     background-size: 154px 58px; } }
 /*-----------------------------------------------------------------*/
 /*------------------------- 	  IE8 FIX      ----------------------*/
@@ -1418,3 +1425,17 @@ input.error {
 @media only screen and (min-width: 1024px) and (min-height: 830px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1024px) and (min-height: 830px) and (min-width: 1024px) and (min-height: 830px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1024px) and (min-height: 830px) and (min-device-pixel-ratio: 1.5) {
   .header h2 {
     background-image: image-url("decor-turquoise@2x.png"); } }
+
+.stateful-button {
+  position: relative;
+  display: inline-block;
+}
+.spinner {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: image-url("ajax-loader.gif") center center no-repeat rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+}
+.successful { display: none; }

@@ -234,63 +234,6 @@ var save_the_date = {
             });
         }
 
-        $("#rsvp form").submit(function () {
-            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-            var address = $("#email").val(),
-                name = $("#name").val(),
-                reception = $("#check-reception").is(':checked'),
-                adults = $("#adults").val(),
-                stopped = false;
-            $(".error").removeClass("error");
-            if (reception) {
-                if (adults !== undefined && (adults === "" || adults === $("#adults").attr("placeholder"))) {
-                    $("#adults").addClass("error");
-                    stopped = true;
-                }
-            }
-
-            if (name === "" || name === $("#name").attr("placeholder")) {
-                $("#name").addClass("error");
-                stopped = true;
-            }
-
-            if ((address === "") || (reg.test(address) === false)) {
-                $("#email").addClass("error");
-                stopped = true;
-            }
-
-            if (!(stopped)) {
-                var form = $(this);
-
-                var formData = $(form).serialize(),
-                    $note = $('#note');
-
-                $.ajax({
-                    type: "POST",
-                    url: "send.php",
-                    data: formData,
-                    success: function (response) {
-                        var result = '';
-                        switch (response) {
-                            case "success":
-                                $(form).hide();
-                                $("html, body").animate({
-                                    scrollTop: $(document).height()
-                                }, "slow");
-                                result = self.option.sendServerMessages[0];
-                                break;
-                            case "error":
-                                result = self.option.sendServerMessages[1];
-                                break;
-                        }
-                        $note.html(result);
-                    }
-                });
-
-                return false;
-            }
-            return false;
-        });
     }
 
 };

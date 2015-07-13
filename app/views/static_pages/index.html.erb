@@ -77,18 +77,42 @@
       
       <div class="wrapper clearfix stay">
           <h2 class="title">Stay</h2>
-          <p>Plantation Island Resort Fiji is the location of both the wedding and reception,
-            nestled on the 553 acre island of Malolo Lail ai part of the Mamanuca Islands and 
+          <p><a href="http://plantationisland.com/" target="_blank">Plantation Island Resort Fiji</a> is the location of both the wedding and reception,
+            nestled on the 553 acre island of Malolo Lailai part of the Mamanuca Islands and 
             is just 16km offshore from Fijis mainland international airport Nadi.</p>
           <p>Samantha and Trevor will be staying at the resort from May 10th to May 17th</p>
           <p>We have arranged a fantastic group discount on all bookings made through 
-            Planation Island Resort. Bookings must be made direct with the resort and 
+            Plantation Island Resort. Bookings must be made direct with the resort and 
             cannot be combined with any other specials.</p>
           <p>20% off all accommodation bookings. Any booking made for 5 nights or more will
             also receive a $200 Fiji Dollar resort food and beverage voucher.</p>
             <p>To take advantage of this deal please send your booking request to
             <a href="mailto:reserve@plantationisland.com?subject=Hutchings / Wistaff Wedding Special May 15th">reserve@plantationisland.com</a>
-            with the subject: Hutchings / Wistaff Wedding Special May 15th</p>
+            with the subject: <u>Hutchings / Wistaff Wedding Special May 15th</u></p>
+
+          <h3>Pricing</h3>
+          <p><%= link_to '2015 Plantation Island Resort prices', 'plantation_accommodation_pricing.xlsx' %></p>
+          <p>Prices are per room per night and based on 2 adults sharing (kids stay free)</p>
+          <p>Please note the above linked rates are the 2015 rate which the resort has offered to honour for any bookings made now and before the new rates come out (End of July / beginning of August) and will go up between 5 – 15% after this time</p>
+
+          <h3>Other accommodation Options</h3>
+          <p>Unfortunately no specials are offered on the following options:</p>
+          <p>
+            Lomani, adults only resort<br>
+            Lomani is a 5 star resort and located right next door to Plantation<br>
+            <a href="http://lomaniisland.com/" target="_blank">http://lomaniisland.com/</a>
+          </p>
+          <p>
+            Musket Cove<br>
+            A 10 minute walk away<br>
+            <a href="http://www.musketcovefiji.com/">http://www.musketcovefiji.com/</a>
+          </p>
+
+          <h3>Getting There</h3>
+          <p>Step 1: Fly into Nadi Fiji International Airport.<br>
+          Step 2: Get to Plantation, Lomani or Musket cove by air (10 minutes) or boat (50 minutes).<br>
+          Details here: <a href="http://plantationisland.com/the-island/transfers/" target="_blank">http://plantationisland.com/the-island/transfers/</a>
+          </p>
         </div>
     </section>
     <!-- CEREMONY SECTION ENDS -->
@@ -121,11 +145,13 @@
           <p>We look forward to celebrating with you in a tropical paradise.</p> 
           <p>Please reply asap.</p>
         </div>
+
+        <div class="successful"><h3>Thanks!</h3></div>
         
-        <form action="#" method="post">
+        <form id="rsvp-email">
           
           <fieldset>
-            <h3>Will you be joining us for the best wedding, party, holiday ever?</h3>
+            <h3>Will you be joining us for the best wedding, party & holiday ever?</h3>
             <div class="checkbox">
               <input type="checkbox" name="check-reception" id="check-reception" >
               <label for="check-reception">Yes! Sign us up captain.</label>
@@ -146,10 +172,13 @@
             <h3>Personal Informations:</h3>
             <input type="text" id="name" name="name" placeholder="Your Name*">
             <input type="email" id="email" name="email" placeholder="Your E-mail*">
-            <textarea name="message" class="form-message" id="message" placeholder="Want to drop us a line ?"></textarea>
+            <textarea name="message" class="form-message" id="message" placeholder="Want to drop us a line?"></textarea>
           </fieldset>
           
-          <input type="submit" class="submit" id="send" value="send">
+          <div class="stateful-button">
+            <div class="spinner"></div>
+            <input type="submit" class="submit" id="send" value="send">
+          </div>
           
         </form>
         
