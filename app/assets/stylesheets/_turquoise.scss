@@ -309,7 +309,7 @@ h4 {
     box-sizing: border-box;
     padding: 0 1em; }
   .about .they {
-    padding-top: 100px;
+    //padding-top: 100px;
     background-position: center top;
     background-repeat: no-repeat; }
 
@@ -794,19 +794,21 @@ footer {
   .header.scrolled {
     position: relative; }
 
-  .header.scrolled h2 {
-    display: none; }
+//  .header.scrolled h2 {
+//    display: none; }
 
-  .content {
-    position: absolute;
-    top: 1300px;
-    left: 0;
-    right: 0;
-    margin-top: 0; }
+////  .content {
+////    position: absolute;
+////    top: 1300px;
+////    left: 0;
+////    right: 0;
+////    margin-top: 0; }
 
   .about {
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05), inset 0 0 20px white; } }
+ //   background-color: rgba(255, 255, 255, 0.6);
+ //   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05), inset 0 0 20px white;
+   }
+  }
 @media only screen and (min-width: 1140px) {
   .ceremony .wrapper {
     background: image-url("decor_small.png") center 20px no-repeat;
@@ -900,7 +902,7 @@ footer {
       clear: left; }
   .ie-fix .about .they {
     clear: both;
-    padding-top: 100px;
+    //padding-top: 100px;
     width: 100%;
     margin: 0 auto; }
     .ie-fix .about .they p {
@@ -1379,8 +1381,8 @@ a {
 .about strong {
   color: #7cd9dc; }
 
-.about .they {
-  background-image: image-url("decor-turquoise.png"); }
+//.about .they {
+//  background-image: image-url("decor-turquoise.png"); }
 
 input[type='submit'] {
   background: #259a9e; }
